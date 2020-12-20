@@ -1,89 +1,455 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/8.1.2/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/8.1.2/firebase-auth.js"></script>
-    <script defer src="/__/firebase/8.1.2/firebase-database.js"></script>
-    <script defer src="/__/firebase/8.1.2/firebase-firestore.js"></script>
-    <script defer src="/__/firebase/8.1.2/firebase-functions.js"></script>
-    <script defer src="/__/firebase/8.1.2/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/8.1.2/firebase-storage.js"></script>
-    <script defer src="/__/firebase/8.1.2/firebase-analytics.js"></script>
-    <script defer src="/__/firebase/8.1.2/firebase-remote-config.js"></script>
-    <script defer src="/__/firebase/8.1.2/firebase-performance.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Necmettin Cimen / Developer</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Necmettin Cimen / Developer" />
+	<meta name="keywords"
+		content="necmettin, cimen, developer, necmettincimen, necmettin cimen necmettincimen01@gmail.com" />
+	<meta name="author" content="necmettincimen.com" />
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+	<link rel="shortcut icon" href="https://avatars3.githubusercontent.com/u/20802117?s=460&v=4" />
+	<link rel="apple-touch-icon" href="https://avatars3.githubusercontent.com/u/20802117?s=460&v=4" />
+	<link rel="apple-touch-icon-precomposed" href="https://avatars3.githubusercontent.com/u/20802117?s=460&v=4" />
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+	<!-- Facebook and Twitter integration -->
+	<!-- <meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" /> -->
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+	<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+
+	<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css"
+		media="screen" />
+	<!-- Optionally add helpers - button, thumbnail and/or media -->
+	<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css"
+		media="screen" />
+	<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.7" type="text/css" media="screen" />
+
+
+</head>
+
+<body>
+
+	<div class="fh5co-loader"></div>
+
+	<div id="page">
+		<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center">
+						<div class="display-t js-fullheight">
+							<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
+								<div class="profile-thumb"
+									style="background: url(https://avatars3.githubusercontent.com/u/20802117?s=460&v=4);">
+								</div>
+								<h1>
+									<span>Necmettin Çimen</span>
+								</h1>
+								<h3>
+									<span>necmettincimen01@gmail.com </span>
+								</h3>
+								<h3>
+									<span>Developer </span>
+								</h3>
+								<p>
+									<ul class="fh5co-social-icons">
+										<li>
+											<a href="https://github.com/necmettincimen">
+												<i class="icon-github2"></i>
+											</a>
+										</li>
+										<li>
+											<a href="https://www.linkedin.com/in/necmettincimen">
+												<i class="icon-linkedin2"></i>
+											</a>
+										</li>
+										<li>
+											<a href="https://tr.pinterest.com/necmettincimen">
+												<i class="icon-pinterest"></i>
+											</a>
+										</li>
+									</ul>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div id="fh5co-resume" class="fh5co-bg-color">
+			<div class="container">
+				<div class="row animate-box">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+						<h2>My Resume</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 col-md-offset-0">
+						<ul class="timeline">
+							<li class="timeline-heading text-center animate-box">
+								<div>
+									<h3>Work Experience</h3>
+								</div>
+							</li>
+							<li class="animate-box timeline-unverted">
+								<div class="timeline-badge">
+									<i class="icon-suitcase"></i>
+								</div>
+								<div class="timeline-panel">
+									<div class="timeline-heading">
+										<h3 class="timeline-title">Web & Mobil Developer</h3>
+										<span class="company">Alpata - 2020 Feb - Current</span>
+									</div>
+									<div class="timeline-body">
+										<a href="http://alpatateknoloji.com" target="_blank">alpatateknoloji.com</a>
+									</div>
+								</div>
+							</li>
+							<li class="timeline-inverted animate-box">
+								<div class="timeline-badge">
+									<i class="icon-suitcase"></i>
+								</div>
+								<div class="timeline-panel">
+									<div class="timeline-heading">
+										<h3 class="timeline-title">Web & Mobil Developer</h3>
+										<span class="company">Enal Yazılım - 2019 June - 2019 December</span>
+									</div>
+									<div class="timeline-body">
+										<a href="http://enal.com.tr/" target="_blank">enal.com.tr</a>
+									</div>
+								</div>
+							</li>
+							<li class="animate-box timeline-unverted">
+								<div class="timeline-badge">
+									<i class="icon-suitcase"></i>
+								</div>
+								<div class="timeline-panel">
+									<div class="timeline-heading">
+										<h3 class="timeline-title">Web & Mobil Developer</h3>
+										<span class="company">TUGA - 2017 - 2019</span>
+									</div>
+									<div class="timeline-body">
+										<a href="http://www.tuga.com.tr" target="_blank">www.tuga.com.tr</a>
+									</div>
+								</div>
+							</li>
+							<li class="timeline-inverted animate-box">
+								<div class="timeline-badge">
+									<i class="icon-suitcase"></i>
+								</div>
+								<div class="timeline-panel">
+									<div class="timeline-heading">
+										<h3 class="timeline-title">Web Developer</h3>
+										<span class="company">PİTON Ar-Ge ve Yazılım Evi - 2016 June - 2017</span>
+									</div>
+									<div class="timeline-body">
+										<a href="http://piton.com.tr/" target="_blank">www.piton.com.tr</a>
+									</div>
+								</div>
+							</li>
+
+							<br>
+							<li class="timeline-heading text-center animate-box">
+								<div>
+									<h3>Education</h3>
+								</div>
+							</li>
+							<li class="timeline-inverted animate-box">
+								<div class="timeline-badge">
+									<i class="icon-graduation-cap"></i>
+								</div>
+								<div class="timeline-panel">
+									<div class="timeline-heading">
+										<h3 class="timeline-title">Graduation</h3>
+										<span class="company">İnönü University - 2015 - 2020</span>
+									</div>
+									<div class="timeline-body">
+										<a href="http://inonu.edu.tr/en/" target="_blank">http://inonu.edu.tr/en/</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div id="fh5co-features" class="animate-box">
+			<div class="container">
+				<div class="services-padding">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+							<h2>My Projects</h2>
+						</div>
+					</div>
+					<div class="row" id="myProjects">
+
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div id="fh5co-resume" class="fh5co-bg-color">
+			<div class="container">
+				<div class="row animate-box">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+						<h2>Portfolio</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 col-md-offset-0">
+						<ul class="timeline">
+							<li class="timeline-heading text-center animate-box">
+								<div>
+									<h3>Tuga Teknoloji</h3>
+								</div>
+							</li>
+							<li class="animate-box timeline-unverted">
+								<div class="timeline-badge">
+									<i class="icon-suitcase"></i>
+								</div>
+								<div class="timeline-panel">
+									<div class="timeline-heading">
+										<h3 class="timeline-title">Tedarik Sistemi</h3>
+										<span class="company">MVC - MSSQL - MALATYA BÜYÜKŞEHİR BELEDİYESİ VE
+											MASKİ</span>
+										<a href="http://tedarik.maski.gov.tr/"
+											target="_blank">www.tedarik.maski.gov.tr</a>
+									</div>
+									<div class="timeline-body" style="margin-top: 10px;">
+										<a class="fancybox-thumb" rel="fancybox-thumb" href="images/tedarik/2.png"
+											title="Tedarik Listeleme Ekranı">
+											<img src="images/tedarik/2.png" style="height: 160px;width: 240px" alt="" />
+										</a>
+										<a class="fancybox-thumb" rel="fancybox-thumb" href="images/tedarik/3.png"
+											title="Tedarik İlan Ekleme Ekranı">
+											<img src="images/tedarik/3.png" style="height: 160px;width: 240px" alt="" />
+										</a>
+										<a class="fancybox-thumb" rel="fancybox-thumb" href="images/tedarik/4.png"
+											title="Tedarik Davet Ekranı">
+											<img src="images/tedarik/4.png" style="height: 160px;width: 240px" alt="" />
+										</a>
+										<a class="fancybox-thumb" rel="fancybox-thumb" href="images/tedarik/6.png"
+											title="Tedarik Teklif Ekranı">
+											<img src="images/tedarik/6.png" style="height: 160px;width: 240px" alt="" />
+										</a>
+										<a class="fancybox-thumb" rel="fancybox-thumb" href="images/tedarik/7.png"
+											title="Tedarik Bilgilendirme Ekranı">
+											<img src="images/tedarik/7.png" style="height: 160px;width: 240px" alt="" />
+										</a>
+										<a class="fancybox-thumb" rel="fancybox-thumb" href="images/tedarik/14.png"
+											title="Tedarik Bilgilendirme Ekranı">
+											<img src="images/tedarik/14.png" style="height: 160px;width: 240px"
+												alt="" />
+										</a>
+										<a class="fancybox-thumb" rel="fancybox-thumb" href="images/tedarik/15.png"
+											title="Tedarik Bilgilendirme Ekranı">
+											<img src="images/tedarik/15.png" style="height: 160px;width: 240px"
+												alt="" />
+										</a>
+									</div>
+								</div>
+							</li>
+							<li class="timeline-inverted animate-box">
+								<div class="timeline-badge">
+									<i class="icon-suitcase"></i>
+								</div>
+								<div class="timeline-panel">
+									<div class="timeline-heading">
+										<h3 class="timeline-title">Araç Takip Sistemi</h3>
+										<span class="company">MVC - MSSQL - MASKİ VE ESENLİK</span>
+									</div>
+									<div class="timeline-body">
+										<a class="fancybox-thumb" rel="fancybox-thumb" href="images/aractakip/2.png"
+											title="Araç Ekranı">
+											<img src="images/aractakip/2.png" style="height: 160px;width: 240px"
+												alt="" />
+										</a>
+										<a class="fancybox-thumb" rel="fancybox-thumb" href="images/aractakip/3.png"
+											title="Araç Ekleme Ekranı">
+											<img src="images/aractakip/3.png" style="height: 160px;width: 240px"
+												alt="" />
+										</a>
+										<a class="fancybox-thumb" rel="fancybox-thumb" href="images/aractakip/4.png"
+											title="Yakıt Ekranı">
+											<img src="images/aractakip/4.png" style="height: 160px;width: 240px"
+												alt="" />
+										</a>
+										<a class="fancybox-thumb" rel="fancybox-thumb" href="images/aractakip/6.png"
+											title="Birim Ekranı">
+											<img src="images/aractakip/6.png" style="height: 160px;width: 240px"
+												alt="" />
+										</a>
+										<a class="fancybox-thumb" rel="fancybox-thumb" href="images/aractakip/8.png"
+											title="Rapor Ekranı">
+											<img src="images/aractakip/8.png" style="height: 160px;width: 240px"
+												alt="" />
+										</a>
+										<a class="fancybox-thumb" rel="fancybox-thumb" href="images/aractakip/10.png"
+											title="Rapor Ekranı">
+											<img src="images/aractakip/10.png" style="height: 160px;width: 240px"
+												alt="" />
+										</a>
+									</div>
+								</div>
+							</li>
+							<div class="timeline-panel">
+								<div class="timeline-heading">
+									<h3 class="timeline-title">Soket Bilgilendirme Sistemi</h3>
+									<span class="company">SOCKET.IO - MONGODB</span>
+								</div>
+								<div class="timeline-body" style="margin-top: 10px;">
+									<a class="fancybox-thumb" rel="fancybox-thumb" href="images/socket/1.png"
+										title="Soket Listesi">
+										<img src="images/socket/1.png" style="height: 160px;width: 240px" alt="" />
+									</a>
+									<a class="fancybox-thumb" rel="fancybox-thumb" href="images/socket/3.png"
+										title="Socket İletişim Ekranı">
+										<img src="images/socket/3.png" style="height: 160px;width: 240px" alt="" />
+									</a>
+								</div>
+							</div>
+							</li>
+							<li class="timeline-inverted animate-box">
+								<div class="timeline-badge">
+									<i class="icon-suitcase"></i>
+								</div>
+								<div class="timeline-panel">
+									<div class="timeline-heading">
+										<h3 class="timeline-title">Dinamik Rapor Mobil</h3>
+										<span class="company">REACT NATİVE - MVC - MSSQL</span>
+									</div>
+									<div class="timeline-body">
+										<a class="fancybox-thumb" rel="fancybox-thumb" href="images/dinamikmobil/2.png"
+											title="Dinamik Rapor Mobil">
+											<img src="images/dinamikmobil/2.png" style="height: 240px;width: 160px"
+												alt="" />
+										</a>
+										<a class="fancybox-thumb" rel="fancybox-thumb" href="images/dinamikmobil/3.png"
+											title="Dinamik Rapor Mobil">
+											<img src="images/dinamikmobil/3.png" style="height: 240px;width: 160px"
+												alt="" />
+										</a>
+									</div>
+								</div>
+							</li>
+
+							<br>
+							<li class="timeline-heading text-center animate-box">
+								<div>
+									<h3>Others</h3>
+								</div>
+							</li>
+							<li class="timeline-inverted animate-box">
+								<div class="timeline-badge">
+									<i class="icon-suitcase"></i>
+								</div>
+								<div class="timeline-panel">
+									<div class="timeline-heading">
+										<h3 class="timeline-title">Mobil Mübaşir</h3>
+										<span class="company">NET CORE. - MSSQL - REACT NATİVE - BİNGÖL BAROSU</span>
+									</div>
+									<div class="timeline-body">
+										<a href="https://www.mobilmubasir.com/"
+											target="_blank">https://www.mobilmubasir.com/</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div id="fh5co-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<p>&copy; 2019 </p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="gototop js-top">
+			<a href="#" class="js-gotop">
+				<i class="icon-arrow-up22"></i>
+			</a>
+		</div>
+
+		<!-- jQuery -->
+		<script src="js/jquery.min.js"></script>
+		<!-- jQuery Easing -->
+		<script src="js/jquery.easing.1.3.js"></script>
+		<!-- Bootstrap -->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- Waypoints -->
+		<script src="js/jquery.waypoints.min.js"></script>
+		<!-- Stellar Parallax -->
+		<script src="js/jquery.stellar.min.js"></script>
+
+		<!-- Add mousewheel plugin (this is optional) -->
+		<script type="text/javascript" src="fancybox/lib/jquery.mousewheel.pack.js"></script>
+
+		<!-- Add fancyBox -->
+		<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.7"></script>
+
+		<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+		<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+		<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+		<!-- Main -->
+		<script src="js/main.js"></script>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-43951984-4"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
+
+			gtag('config', 'UA-43951984-4');
+		</script>
+
+
+</body>
+
 </html>
