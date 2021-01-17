@@ -1,3 +1,3 @@
 # mywebsite
 
-# http://www.necmettincimen.com
+# http://necmettin.me
