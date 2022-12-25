@@ -1,3 +1,0 @@
-# mywebsite
-
-# http://necmettin.me
