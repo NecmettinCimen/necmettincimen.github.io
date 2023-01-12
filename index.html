@@ -1,51 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="utf-8" />
-    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name='viewport' content="width=device-width,height=device-height, initial-scale=1, shrink-to-fit=yes">
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
 
-    <!--theme colors -->
-    <meta name="theme-color" content="" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
 
-    <!--Basic meta info -->
-    <meta name="keywords"
-        content="necmettin, cimen, necmettin cimen, necmettin çimen, arge ve devops, devops, fullstack, developer, eskisehir, yazılım">
-    <meta name="author" content="Necmettin Çimen" />
-    <meta name="description" content="Necmettin Çimen Arge ve DevOps Mühendisi">
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
 
-    <!--OpenGraph meta -->
-    <meta property="og:description" content="Necmettin Çimen Arge ve DevOps Mühendisi" />
-    <meta property="og:title" content="Necmettin Çimen" />
-    <meta property="og:image" content="logo.png" />
-    <meta property="og:url" content="necmettin.me" />
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="/">
 
-    <!--meta for twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:creator" content="@necmettincimen">
-    <meta name="twitter:title" content="Necmettin Çimen">
-    <meta name="twitter:image" content="logo.png">
-    <meta name="twitter:site" content="@necmettincimen">
-    <meta name="twitter:description" content="">
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
 
-    <!--Favicon-->
-    <link rel="shortcut icon" type="image/png" href="logo.png" />
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="necport">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
-    <!-- Manifest for PWA -->
-    <link rel="manifest" href="manifest.json">
-    <title>Necmettin Çimen</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>Necmettin Çimen - DevOps</title>
+  <link rel="manifest" href="manifest.json">
+
+  <script>
+    // The value below is injected by flutter build, do not touch.
+    var serviceWorkerVersion = '2953051985';
+  </script>
+  <!-- This script adds the flutter initialization JS code -->
+  <script src="main.dart.js" defer></script>
 </head>
-
 <body>
-    <script>
-        window.location.href = "http://necmettin.me"
-
-    </script>
+  <script>
+    window.addEventListener('load', function(ev) {
+      // Download main.dart.js
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        }
+      }).then(function(engineInitializer) {
+        return engineInitializer.initializeEngine();
+      }).then(function(appRunner) {
+        return appRunner.runApp();
+      });
+    });
+  </script>
 </body>
-
 </html>
