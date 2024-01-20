@@ -1,58 +1,348 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Necmettin Cimen personal web site">
+    <meta name="author" content="Necmettin Cimen">
+    <meta name="robots" content="index, archive">
 
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
+    <title>Necmettin Cimen - Full Stack Developer</title>
 
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/unicons.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
 
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="/">
+    <!-- MAIN STYLE -->
+    <link rel="stylesheet" href="css/tooplate-style.css">
 
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
-
-  <!-- iOS meta tags & icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="necport">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
-
-  <title>Necmettin Çimen - DevOps</title>
-  <link rel="manifest" href="manifest.json">
-
-  <script>
-    // The value below is injected by flutter build, do not touch.
-    var serviceWorkerVersion = '2953051985';
-  </script>
-  <!-- This script adds the flutter initialization JS code -->
-  <script src="main.dart.js" defer></script>
 </head>
-<body>
-  <script>
-    window.addEventListener('load', function(ev) {
-      // Download main.dart.js
-      _flutter.loader.loadEntrypoint({
-        serviceWorker: {
-          serviceWorkerVersion: serviceWorkerVersion,
-        }
-      }).then(function(engineInitializer) {
-        return engineInitializer.initializeEngine();
-      }).then(function(appRunner) {
-        return appRunner.runApp();
-      });
-    });
-  </script>
+<body class="dark-mode">
+
+<!-- MENU -->
+<nav class="navbar navbar-expand-sm navbar-light">
+    <div class="container">
+        <a class="navbar-brand" href="index.html"><i class='uil uil-user'></i> Necmettin Cimen</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a href="#about" class="nav-link"><span data-hover="About">About</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#project" class="nav-link"><span data-hover="Projects">Projects</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#resume" class="nav-link"><span data-hover="Resume">Resume</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link"><span data-hover="Contact">Contact</span></a>
+                </li>
+            </ul>
+
+            <!--                <ul class="navbar-nav ml-lg-auto">-->
+            <!--                    <div class="ml-lg-4">-->
+            <!--                      <div class="color-mode d-lg-flex justify-content-center align-items-center">-->
+            <!--                        <i class="color-mode-icon"></i>-->
+            <!--                        Color mode-->
+            <!--                      </div>-->
+            <!--                    </div>-->
+            <!--                </ul>-->
+        </div>
+    </div>
+</nav>
+
+<!-- ABOUT -->
+<section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
+                <div class="about-text">
+                    <small class="small-text">Welcome to <span class="mobile-block">my portfolio website!</span></small>
+                    <h1 class="animated animated-text">
+                        <span class="mr-2">Hey folks, I'm</span>
+                        <div class="animated-info">
+                            <span class="animated-item">Necmettin Cimen</span>
+                            <span class="animated-item">Full Stack Developer</span>
+                            <span class="animated-item">Head Of Software</span>
+                        </div>
+                    </h1>
+
+                    <p>Building a successful product is a challenge. I am highly energetic in user experience design,
+                        interfaces and web development.</p>
+
+                    <div class="custom-btn-group mt-4">
+                        <a href="https://linkedin.com/in/necmettincimen" target="_blank" class="btn mr-lg-2 custom-btn">
+                            Download Resume</a>
+                        <a href="https://github.com/necmettincimen" target="_blank" class="btn mr-lg-2 custom-btn">Github
+                            Profile</a>
+                        <a href="#contact" class="btn custom-btn custom-btn-bg custom-btn-link">Get a free quote</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5 col-md-12 col-12">
+                <div class="about-image svg">
+                    <img src="images/undraw/undraw_product_iteration_kjok.svg" class="img-fluid" alt="svg image">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="project py-5" id="project">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-11 text-center mx-auto col-12">
+
+                <div class="col-lg-8 mx-auto">
+                    <h2>Things I have some hobby projects</h2>
+                </div>
+
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="project-info">
+                            <img src="images/project/1_login.png" class="img-fluid" alt="project image">
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="project-info">
+                            <img src="images/project/2_register.png" class="img-fluid" alt="project image">
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="project-info">
+                            <img src="images/project/3_home.png" class="img-fluid" alt="project image">
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="project-info">
+                            <img src="images/project/4_arac.png" class="img-fluid" alt="project image">
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="project-info">
+                            <img src="images/project/5_musteri.png" class="img-fluid" alt="project image">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="project-info">
+                            <img src="images/project/6_bakim.png" class="img-fluid" alt="project image">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="project-info">
+                            <img src="images/project/7_kullanici.png" class="img-fluid" alt="project image">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="project-info">
+                            <img src="images/project/8_yetki.png" class="img-fluid" alt="project image">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="project-info">
+                            <img src="images/project/9_yetkili.png" class="img-fluid" alt="project image">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-6 col-12">
+                <h2 class="mb-4">Experiences</h2>
+
+                <div class="timeline">
+                    <div class="timeline-wrapper">
+                        <div class="timeline-yr">
+                            <span>2023</span>
+                        </div>
+                        <div class="timeline-info">
+                            <h3><span>Full Stack Developer</span><small>Forceget</small></h3>
+                            <p>
+                                <br />
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-wrapper">
+                        <div class="timeline-yr">
+                            <span>2019</span>
+                        </div>
+                        <div class="timeline-info">
+                            <h3><span>Full Stack Developer</span><small>Alpata Teknoloji</small></h3>
+                            <p>
+                                <br />
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-wrapper">
+                        <div class="timeline-yr">
+                            <span>2017</span>
+                        </div>
+                        <div class="timeline-info">
+                            <h3><span>Software Developer</span><small>Tuga Teknoloji</small></h3>
+                            <p>
+                                <br />
+                            </p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-12">
+                <h2 class="mb-4 mobile-mt-2">Educations</h2>
+
+                <div class="timeline">
+                    <div class="timeline-wrapper">
+                        <div class="timeline-yr">
+                            <span>2015</span>
+                        </div>
+                        <div class="timeline-info">
+                            <h3><span>Computer Engineer</span><small>Inonu University</small></h3>
+<!--                            <p>Please tell your friends about Tooplate website. That would be very helpful. We need your-->
+<!--                                support.</p>-->
+                        </div>
+                    </div>
+
+<!--                    <div class="timeline-wrapper">-->
+<!--                        <div class="timeline-yr">-->
+<!--                            <span>2015</span>-->
+<!--                        </div>-->
+<!--                        <div class="timeline-info">-->
+<!--                            <h3><span>User Interfaces</span><small>Creative Agency</small></h3>-->
+<!--                            <p><a rel="nofollow" href="https://www.facebook.com/tooplate">Tooplate</a> is a great-->
+<!--                                website to download HTML templates without any login or email.</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+<!--                    <div class="timeline-wrapper">-->
+<!--                        <div class="timeline-yr">-->
+<!--                            <span>2013</span>-->
+<!--                        </div>-->
+<!--                        <div class="timeline-info">-->
+<!--                            <h3><span>Artwork Design</span><small>New Art School</small></h3>-->
+<!--                            <p>You can freely use Tooplate's templates for your business or personal sites. You cannot-->
+<!--                                redistribute this template without a permission.</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact py-5" id="contact">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-5 mr-lg-5 col-12">
+                <div class="google-map w-100">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d98139.2431897755!2d30.462414173904705!3d39.765445822496964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cc3e08220c0e5f%3A0xbc89395938049a08!2zRXNracWfZWhpciwgVMO8cmtpeWU!5e0!3m2!1sen!2sus!4v1705779303037!5m2!1sen!2sus"
+                            width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+
+                <div class="contact-info d-flex justify-content-between align-items-center py-4 px-lg-5">
+                    <div class="contact-info-item">
+                        <h3 class="mb-3 text-white">Say hello</h3>
+                        <p><a href="mailto:necmettin.dev@gmail.com">necmettin.dev@gmail.com</a></p>
+                    </div>
+
+<!--                    <ul class="social-links">-->
+<!--                        <li><a href="#" class="uil uil-dribbble" data-toggle="tooltip" data-placement="left"-->
+<!--                               title="Dribbble"></a></li>-->
+<!--                        <li><a href="#" class="uil uil-instagram" data-toggle="tooltip" data-placement="left"-->
+<!--                               title="Instagram"></a></li>-->
+<!--                        <li><a href="#" class="uil uil-youtube" data-toggle="tooltip" data-placement="left"-->
+<!--                               title="Youtube"></a></li>-->
+<!--                    </ul>-->
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-12">
+                <div class="contact-form">
+                    <h2 class="mb-4">Interested to work together? Let's talk</h2>
+
+
+                    <form action="https://formspree.io/f/xjvdaege" method="POST" class="form" data-form>
+                        <div class="row">
+                            <div class="col-lg-6 col-12">
+                                <input type="text" class="form-control" name="name" placeholder="Your Name" id="name">
+                            </div>
+
+                            <div class="col-lg-6 col-12">
+                                <input type="email" class="form-control" name="email" placeholder="Email" id="email">
+                            </div>
+
+                            <div class="col-12">
+                                <textarea name="message" rows="6" class="form-control" id="message"
+                                          placeholder="Message"></textarea>
+                            </div>
+
+                            <div class="ml-lg-auto col-lg-5 col-12">
+                                <input type="submit" class="form-control submit-btn" value="Send Button">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer py-5">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-12 col-12">
+                <p class="copyright-text text-center">Copyright &copy; 2024 Necmettin Çimen . All rights reserved</p>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/Headroom.js"></script>
+<script src="js/jQuery.headroom.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/custom.js"></script>
+
 </body>
 </html>
