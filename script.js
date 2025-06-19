@@ -195,18 +195,17 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         
+        reposContainer.classList.remove('timeline');
         reposContainer.innerHTML = repos.map((repo, index) => {
             const createdDate = new Date(repo.created_at);
             const year = createdDate.getFullYear();
             const month = createdDate.toLocaleString('en-US', { month: 'short' });
-            
             // Calculate time ago
             const now = new Date();
             const diffTime = Math.abs(now - createdDate);
             const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
             const diffMonths = Math.floor(diffDays / 30);
             const diffYears = Math.floor(diffDays / 365);
-            
             let timeAgo = '';
             if (diffYears > 0) {
                 timeAgo = `${diffYears} year${diffYears > 1 ? 's' : ''} ago`;
@@ -215,11 +214,10 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 timeAgo = `${diffDays} day${diffDays > 1 ? 's' : ''} ago`;
             }
-            
             return `
                 <div class="repo-timeline-item" data-topics="${repo.topics ? repo.topics.join(',') : ''}">
-                    <div class="repo-year">${timeAgo}</div>
                     <div class="repo-content">
+                        <div style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 0.25rem;">${timeAgo}</div>
                         <h3>${repo.name}</h3>
                         <p>${repo.description || 'No description available'}</p>
                         <div class="repo-stats">

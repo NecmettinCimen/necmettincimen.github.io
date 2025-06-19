@@ -387,6 +387,25 @@ body {
     position: relative;
 }
 
+.repos-container.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.repos-container.timeline::before {
+    content: '';
+    position: absolute;
+    left: 32px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--accent);
+    z-index: 0;
+}
+
 .repo-timeline-item {
     display: flex;
     align-items: flex-start;
@@ -488,6 +507,62 @@ body {
     border-radius: 15px;
     font-size: 0.8rem;
     color: var(--text-secondary);
+}
+
+.repo-timeline-item.timeline {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2.5rem;
+    padding-left: 90px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+    z-index: 1;
+    min-height: 70px;
+}
+
+.repo-timeline-item.timeline::before {
+    content: '';
+    position: absolute;
+    left: 32px;
+    top: 32px;
+    bottom: -2.5rem;
+    width: 2px;
+    background: var(--accent);
+    z-index: 0;
+}
+
+.repo-timeline-item.timeline:last-child::before {
+    display: none;
+}
+
+.repo-year.timeline {
+    position: absolute;
+    left: 20px;
+    top: 24px;
+    transform: none;
+    background: var(--accent);
+    color: var(--bg-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    font-weight: bold;
+    z-index: 2;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 4px rgba(8,145,178,0.15);
+    font-size: 0.95rem;
+    border: 2px solid var(--bg-primary);
+}
+
+.repo-content {
+    flex: 1;
+    min-height: 48px;
+    margin-top: 8px;
 }
 
 /* Contact Section */
@@ -705,6 +780,23 @@ footer {
 
     .contact-social {
         gap: 1rem;
+    }
+
+    .repos-container.timeline::before {
+        left: 16px;
+    }
+    .repo-timeline-item.timeline {
+        padding-left: 60px;
+    }
+    .repo-year.timeline {
+        left: 0;
+        width: 36px;
+        height: 36px;
+        font-size: 0.75rem;
+        top: 18px;
+    }
+    .repo-content {
+        margin-top: 0;
     }
 }
 
