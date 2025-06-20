@@ -125,6 +125,14 @@
             </div>
         </section>
 
+        <section id="github-activity" class="section" style="text-align:center; margin-bottom: 2rem;">
+            <h2 style="font-size:1.5rem; margin-bottom:0.5rem;">GitHub Activity</h2>
+            <p style="margin-bottom:1rem; color:#555;">My recent GitHub contributions</p>
+            <a href="https://github.com/necmettincimen" target="_blank" rel="noopener noreferrer" aria-label="GitHub Contribution Graph">
+                <img src="https://ghchart.rshah.org/necmettincimen" alt="Necmettin Cimen's GitHub Contribution Graph" style="max-width:100%; height:250px; border-radius:8px; border:1px solid black; background:black;" loading="lazy" />
+            </a>
+        </section>
+
         <section id="about" class="section">
             <h2>About Me</h2>
             <div class="about-content">
@@ -135,76 +143,96 @@
 
         <section id="experience" class="section">
             <h2>Experience</h2>
-            <div class="timeline" itemscope itemtype="http://schema.org/ItemList">
-                <div class="timeline-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                    <meta itemprop="position" content="1" />
-                    <div class="timeline-year">2023-Now</div>
-                    <div class="timeline-content" itemprop="item" itemscope itemtype="http://schema.org/Organization">
-                        <h3 itemprop="jobTitle">Senior Full Stack Developer</h3>
-                        <h4 itemprop="name">Forceget</h4>
-                        <div class="location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="address">Istanbul</span></div>
-                        <div class="date"><i class="far fa-calendar-alt" aria-hidden="true"></i> August 2023 - Present</div>
+            <div class="experience-container" aria-label="Work Experience Timeline">
+                <!-- Forceget -->
+                <div class="experience-card">
+                    <div class="exp-header">
+                        <div class="exp-title">Senior Full Stack Developer</div>
+                        <div class="exp-company"><i class="fas fa-external-link-alt exp-link-icon" aria-hidden="true"></i> <a href="https://forceget.com" target="_blank" rel="noopener noreferrer">Forceget</a> <span class="exp-location">Istanbul, Türkiye</span></div>
+                        <div class="exp-dates">Aug 2023 – Current</div>
                     </div>
+                    <ul class="exp-details">
+                        <li>Led a team of ~10 engineers, providing technical guidance and mentorship.</li>
+                        <li>Spearheaded design, development, and deployment of large-scale web applications.</li>
+                        <li>Defined technological roadmaps and made critical architectural decisions.</li>
+                        <li>Optimized database queries and API responses, achieving 45% performance improvement.</li>
+                        <li>Enhanced CI/CD pipelines, accelerating delivery and automating deployments.</li>
+                        <li>Collaborated with cross-functional teams to deliver robust solutions.</li>
+                        <li>Designed and implemented a new microservices architecture, reducing latency by 60%.</li>
+                        <li>Introduced Agile/Scrum methodologies, increasing team productivity by 35%.</li>
+                    </ul>
                 </div>
-                <div class="timeline-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                    <meta itemprop="position" content="2" />
-                    <div class="timeline-year">2021-2023</div>
-                    <div class="timeline-content" itemprop="item" itemscope itemtype="http://schema.org/Organization">
-                        <h3 itemprop="jobTitle">Senior Full Stack Developer</h3>
-                        <h4 itemprop="name">Alpata</h4>
-                        <div class="location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Eskisehir</div>
-                        <div class="date"><i class="far fa-calendar-alt" aria-hidden="true"></i> July 2021 - July 2023</div>
+                <!-- Alpata (Senior) -->
+                <div class="experience-card">
+                    <div class="exp-header">
+                        <div class="exp-title">Senior Full Stack Developer</div>
+                        <div class="exp-company"><i class="fas fa-external-link-alt exp-link-icon" aria-hidden="true"></i> <a href="https://alpatateknoloji.com/" target="_blank" rel="noopener noreferrer">Alpata</a> <span class="exp-location">Ankara, Türkiye</span></div>
+                        <div class="exp-dates">Jul 2021 – Jul 2023</div>
                     </div>
+                    <ul class="exp-details">
+                        <li>Provided technical leadership in .NET Core, Angular, and Microservices.</li>
+                        <li>Troubleshot complex issues and developed effective solutions.</li>
+                        <li>Delivered scalable solutions for enterprise-level software.</li>
+                        <li>Maintained communication with stakeholders for timely delivery.</li>
+                        <li>Mentored junior developers and upheld code quality standards.</li>
+                        <li>Enhanced systems by integrating new features and optimizing databases.</li>
+                    </ul>
                 </div>
-                <div class="timeline-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                    <meta itemprop="position" content="3" />
-                    <div class="timeline-year">2021</div>
-                    <div class="timeline-content" itemprop="item" itemscope itemtype="http://schema.org/Organization">
-                        <h3 itemprop="jobTitle">Full Stack Developer</h3>
-                        <h4 itemprop="name">Bilişim A.Ş.</h4>
-                        <div class="location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Ankara</div>
-                        <div class="date"><i class="far fa-calendar-alt" aria-hidden="true"></i> February 2021 - July 2021</div>
+                <!-- Bilisim AS -->
+                <div class="experience-card">
+                    <div class="exp-header">
+                        <div class="exp-title">Full Stack Developer</div>
+                        <div class="exp-company"><i class="fas fa-external-link-alt exp-link-icon" aria-hidden="true"></i> <a href="https://bilisim.com.tr/" target="_blank" rel="noopener noreferrer">Bilişim A.Ş.</a> <span class="exp-location">Ankara, Türkiye</span></div>
+                        <div class="exp-dates">Feb 2021 – Jul 2021</div>
                     </div>
+                    <ul class="exp-details">
+                        <li>Contributed to all phases of the software development lifecycle.</li>
+                        <li>Developed web applications using Angular and back-end technologies.</li>
+                        <li>Developed RESTful APIs and managed databases (Postgres, MySQL, SQL Server).</li>
+                        <li>Integrated new features and participated in debugging processes.</li>
+                    </ul>
                 </div>
-                <div class="timeline-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                    <meta itemprop="position" content="4" />
-                    <div class="timeline-year">2020-2021</div>
-                    <div class="timeline-content" itemprop="item" itemscope itemtype="http://schema.org/Organization">
-                        <h3 itemprop="jobTitle">Full Stack Developer</h3>
-                        <h4 itemprop="name">Alpata</h4>
-                        <div class="location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Ankara</div>
-                        <div class="date"><i class="far fa-calendar-alt" aria-hidden="true"></i> January 2020 - January 2021</div>
+                <!-- Alpata (Full Stack) -->
+                <div class="experience-card">
+                    <div class="exp-header">
+                        <div class="exp-title">Full Stack Developer</div>
+                        <div class="exp-company"><i class="fas fa-external-link-alt exp-link-icon" aria-hidden="true"></i> <a href="https://alpatateknoloji.com/" target="_blank" rel="noopener noreferrer">Alpata</a> <span class="exp-location">Ankara, Türkiye</span></div>
+                        <div class="exp-dates">Jan 2020 – Jan 2021</div>
                     </div>
+                    <ul class="exp-details">
+                        <li>Developed multi-layered web applications with .NET, Angular, SQL Server.</li>
+                        <li>Designed and implemented interactive, dynamic interfaces.</li>
+                        <li>Involved in API development and integration.</li>
+                        <li>Participated in agile sprints and incremental feature delivery.</li>
+                    </ul>
                 </div>
-                <div class="timeline-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                    <meta itemprop="position" content="5" />
-                    <div class="timeline-year">2019</div>
-                    <div class="timeline-content" itemprop="item" itemscope itemtype="http://schema.org/Organization">
-                        <h3 itemprop="jobTitle">Full Stack Developer</h3>
-                        <h4 itemprop="name">Enal Yazılım Danışmanlık</h4>
-                        <div class="location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Malatya</div>
-                        <div class="date"><i class="far fa-calendar-alt" aria-hidden="true"></i> June 2019 - November 2019</div>
+                <!-- Enal Yazılım -->
+                <div class="experience-card">
+                    <div class="exp-header">
+                        <div class="exp-title">Full Stack Developer</div>
+                        <div class="exp-company"><i class="fas fa-external-link-alt exp-link-icon" aria-hidden="true"></i> <a href="http://www.enal.com.tr/" target="_blank" rel="noopener noreferrer">Enal Yazılım Danışmanlık</a> <span class="exp-location">Malatya, Türkiye</span></div>
+                        <div class="exp-dates">Jun 2019 – Oct 2019</div>
                     </div>
+                    <ul class="exp-details">
+                        <li>Worked on both front-end and back-end tasks for various client projects.</li>
+                        <li>Wrote clean, efficient code and contributed to testing processes.</li>
+                        <li>Adapted quickly to new requirements and technology stacks.</li>
+                    </ul>
                 </div>
-                <div class="timeline-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                    <meta itemprop="position" content="6" />
-                    <div class="timeline-year">2017 - 2019</div>
-                    <div class="timeline-content" itemprop="item" itemscope itemtype="http://schema.org/Organization">
-                        <h3 itemprop="jobTitle">Full Stack Developer</h3>
-                        <h4 itemprop="name">Tuga Teknoloji</h4>
-                        <div class="location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Malatya</div>
-                        <div class="date"><i class="far fa-calendar-alt" aria-hidden="true"></i> January 2017 - June 2019</div>
+                <!-- Tuga Teknoloji -->
+                <div class="experience-card">
+                    <div class="exp-header">
+                        <div class="exp-title">Full Stack Developer</div>
+                        <div class="exp-company"><i class="fas fa-external-link-alt exp-link-icon" aria-hidden="true"></i> <a href="https://tuga.com.tr/" target="_blank" rel="noopener noreferrer">Tuga Teknoloji</a> <span class="exp-location">Malatya, Türkiye</span></div>
+                        <div class="exp-dates">May 2017 – Jun 2019</div>
                     </div>
+                    <ul class="exp-details">
+                        <li>Developed websites and applications using HTML, CSS, JavaScript.</li>
+                        <li>Worked on database operations and server-side logic.</li>
+                        <li>Assisted senior developers and delivered features within timelines.</li>
+                    </ul>
                 </div>
             </div>
-        </section>
-
-        <section id="github-activity" class="section" style="text-align:center; margin-bottom: 2rem;">
-            <h2 style="font-size:1.5rem; margin-bottom:0.5rem;">GitHub Activity</h2>
-            <p style="margin-bottom:1rem; color:#555;">My recent GitHub contributions</p>
-            <a href="https://github.com/necmettincimen" target="_blank" rel="noopener noreferrer" aria-label="GitHub Contribution Graph">
-                <img src="https://ghchart.rshah.org/necmettincimen" alt="Necmettin Cimen's GitHub Contribution Graph" style="max-width:100%; height:250px; border-radius:8px; border:1px solid #black; background:black;" loading="lazy" />
-            </a>
         </section>
 
         <section id="repositories" class="section">
@@ -253,4 +281,4 @@
 
     <script src="script.js" defer></script>
 </body>
-</html> 
+</html>

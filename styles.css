@@ -301,6 +301,129 @@ body {
     color: var(--accent-hover);
 }
 
+/* Experience Section */
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.experience-card {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 12px 0 rgba(8,145,178,0.05);
+    padding: 2rem 2.5rem;
+    transition: var(--transition);
+    position: relative;
+}
+
+.experience-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 4px 24px 0 rgba(8,145,178,0.10);
+}
+
+.exp-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+.exp-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.exp-company {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.exp-company a {
+    color: var(--text-primary);
+    text-decoration: underline dotted;
+    text-underline-offset: 2px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.exp-company a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+.exp-location {
+    color: var(--text-secondary);
+    font-size: 0.95em;
+    margin-left: 0.5em;
+}
+
+.exp-dates {
+    font-size: 0.95em;
+    color: var(--text-secondary);
+}
+
+.exp-details {
+    margin-left: 1.2em;
+    color: var(--text-secondary);
+    font-size: 1.05em;
+    line-height: 1.7;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.exp-details li {
+    margin-bottom: 0.5em;
+}
+
+/* External link icon for experience company */
+.exp-link-icon {
+    color: var(--accent);
+    margin-right: 0.35em;
+    font-size: 1em;
+    vertical-align: middle;
+    opacity: 0.85;
+    transition: color 0.2s;
+}
+
+@media (max-width: 768px) {
+    .experience-card {
+        padding: 1.2rem 1rem;
+    }
+    .experience-container {
+        gap: 1.2rem;
+    }
+    .exp-title {
+        font-size: 1.05rem;
+    }
+    .exp-details {
+        font-size: 0.98em;
+        margin-left: 0.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .experience-card {
+        padding: 1rem 0.5rem;
+    }
+    .exp-header {
+        gap: 0.15rem;
+    }
+    .exp-title {
+        font-size: 1em;
+    }
+    .exp-details {
+        font-size: 0.93em;
+        margin-left: 0.2em;
+    }
+}
+
 /* Experience Timeline */
 .timeline {
     position: relative;
