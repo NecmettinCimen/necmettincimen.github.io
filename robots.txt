@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://necmettincimen.xyz/sitemap.xml
+Host: https://necmettincimen.xyz

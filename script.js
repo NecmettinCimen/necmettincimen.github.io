@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         reposContainer.classList.remove('timeline');
-        reposContainer.innerHTML = repos.map((repo, index) => {
+        reposContainer.innerHTML = repos.filter(f=>f.homepage).map((repo, index) => {
             const createdDate = new Date(repo.created_at);
             const year = createdDate.getFullYear();
             const month = createdDate.toLocaleString('en-US', { month: 'short' });
@@ -229,11 +229,9 @@ document.addEventListener('DOMContentLoaded', function() {
                             <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer" class="repo-link">
                                 <i class="fab fa-github"></i> View Code
                             </a>
-                            ${repo.homepage ? `
-                                <a href="${repo.homepage}" target="_blank" rel="noopener noreferrer" class="repo-link">
-                                    <i class="fas fa-external-link-alt"></i> Live Demo
-                                </a>
-                            ` : ''}
+                            <a href="${repo.homepage}" target="_blank" rel="noopener noreferrer" class="repo-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
                         </div>
                         ${repo.topics && repo.topics.length > 0 ? `
                             <div class="repo-topics">

@@ -1,14 +1,27 @@
 :root {
-    --bg-primary: #0a0a0a;
-    --bg-secondary: #1a1a1a;
-    --text-primary: #ffffff;
-    --text-secondary: #a0a0a0;
-    --accent: #0891b2;
-    --accent-hover: #0e7490;
-    --border-radius: 8px;
-    --transition: all 0.3s ease;
+  --color-bg: #f8fafc;
+  --color-bg-alt: #e0f7fa;
+  --color-text: #181a1b;
+  --color-primary: #0891b2;
+  --color-card: #fff;
+  --color-nav: #fff;
+  --color-shadow: #0891b244;
+  --color-accent: #0891b2;
+  --color-accent-hover: #0e7490;
+  --color-secondary: #64748b;
 }
-
+[data-theme="dark"] {
+  --color-bg: #10151a;
+  --color-bg-alt: #18212b;
+  --color-text: #e0e6ed;
+  --color-primary: #06b6d4;
+  --color-card: #18212b;
+  --color-nav: #151d26;
+  --color-shadow: #06b6d466;
+  --color-accent: #06b6d4;
+  --color-accent-hover: #0891b2;
+  --color-secondary: #94a3b8;
+}
 * {
     margin: 0;
     padding: 0;
@@ -17,8 +30,8 @@
 
 body {
     font-family: 'JetBrains Mono', monospace;
-    background-color: var(--bg-primary);
-    color: var(--text-primary);
+    background: var(--color-bg);
+    color: var(--color-text);
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -27,8 +40,8 @@ body {
 .navbar {
     position: fixed;
     width: 100%;
-    background-color: rgba(10, 10, 10, 0.95);
-    backdrop-filter: blur(10px);
+    background: var(--color-nav);
+    box-shadow: 0 2px 8px var(--color-shadow);
     z-index: 1000;
     padding: 1rem 0;
     transition: var(--transition);
@@ -93,15 +106,36 @@ body {
 
 /* Hero Section */
 .hero {
-    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    min-height: 480px;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 6rem 2rem 2rem;
     text-align: center;
+    background: linear-gradient(135deg, var(--color-bg-alt) 0%, var(--color-bg) 100%);
+}
+
+.hero-bg-gradient {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+    background: linear-gradient(120deg, #0891b2 0%, #e0f7fa 100%);
+    opacity: 0.12;
+    pointer-events: none;
+}
+
+.hero-bg-wave {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    z-index: 1;
+    pointer-events: none;
 }
 
 .hero-content {
+    position: relative;
+    z-index: 2;
     max-width: 800px;
     width: 100%;
 }
@@ -237,9 +271,13 @@ body {
     transition: var(--transition);
 }
 
-.social-button:hover {
-    background: rgba(100, 255, 218, 0.2);
-    transform: translateY(-2px);
+.social-buttons a {
+  transition: box-shadow 0.2s, transform 0.2s, background 0.2s;
+}
+.social-buttons a:hover {
+  box-shadow: 0 4px 16px #0891b244;
+  transform: translateY(-4px) scale(1.07) rotate(-2deg);
+  background: #06b6d4 !important;
 }
 
 /* Sections */
@@ -264,7 +302,7 @@ body {
     transform: translateX(-50%);
     width: 60px;
     height: 3px;
-    background: var(--accent);
+    background: var(--color-accent);
     border-radius: 2px;
 }
 
@@ -311,10 +349,11 @@ body {
 }
 
 .experience-card {
-    background: rgba(255, 255, 255, 0.02);
+    background: var(--color-card);
+    color: var(--color-text);
+    box-shadow: 0 2px 8px var(--color-shadow);
     border-radius: var(--border-radius);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 2px 12px 0 rgba(8,145,178,0.05);
     padding: 2rem 2.5rem;
     transition: var(--transition);
     position: relative;
@@ -769,6 +808,10 @@ footer {
 }
 
 /* Animations */
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -1007,4 +1050,181 @@ footer {
 
 .filter-buttons {
     gap: 0.5rem;
+}
+
+/* Modern gradient arka plan ve wave */
+.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 480px;
+  background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+}
+.hero-bg-gradient {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 0;
+  background: linear-gradient(120deg, #0891b2 0%, #e0f7fa 100%);
+  opacity: 0.12;
+  pointer-events: none;
+}
+.hero-bg-wave {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* SVG logo stil */
+.logo-svg svg {
+  display: block;
+  transition: transform 0.3s cubic-bezier(.4,2,.6,1);
+}
+.logo-svg:hover svg {
+  transform: scale(1.12) rotate(-6deg);
+  filter: drop-shadow(0 2px 8px #0891b2aa);
+}
+
+/* Fade-in animasyonları */
+.animated-fadein {
+  opacity: 0;
+  animation: fadeIn 1.2s ease 0.1s forwards;
+}
+.animated-fadein-delay {
+  opacity: 0;
+  animation: fadeIn 1.2s ease 0.7s forwards;
+}
+
+/* Parlayan başlık efekti */
+.shine {
+  background: linear-gradient(90deg, #0891b2 20%, #fff 50%, #0891b2 80%);
+  background-size: 200% auto;
+  color: #0891b2;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine-move 2.5s linear infinite;
+}
+@keyframes shine-move {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.repo-media {
+  margin: 0.5rem 0 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 120px;
+  background: rgba(8,145,178,0.03);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.repo-media img, .repo-media video {
+  max-width: 100%;
+  max-height: 180px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #0891b233;
+  object-fit: cover;
+}
+
+/* Tema toggle ikonları için kontrast ayarı */
+.theme-toggle .theme-icon-light { color: #fbbf24; }
+.theme-toggle .theme-icon-dark { color: #06b6d4; }
+[data-theme="dark"] .theme-toggle .theme-icon-light { color: #fbbf24; }
+[data-theme="dark"] .theme-toggle .theme-icon-dark { color: #06b6d4; }
+
+/* Tema butonu stilleri */
+.theme-toggle {
+  background: var(--color-card);
+  border: 1.5px solid var(--color-accent);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px var(--color-shadow);
+  transition: background 0.2s, border 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+.theme-toggle:hover {
+  background: var(--color-accent);
+  border-color: var(--color-accent-hover);
+}
+.theme-toggle .theme-icon {
+  display: block;
+  color: var(--color-accent);
+  transition: opacity 0.2s;
+}
+.theme-toggle .theme-icon-dark {
+  display: none;
+}
+[data-theme="dark"] .theme-toggle .theme-icon {
+  display: none;
+}
+[data-theme="dark"] .theme-toggle .theme-icon-dark {
+  display: block;
+  color: var(--color-accent);
+}
+
+/* Hero section koyu tema için özel gradient */
+.hero {
+  background: linear-gradient(135deg, var(--color-bg-alt) 0%, var(--color-bg) 100%);
+}
+[data-theme="dark"] .hero {
+  background: linear-gradient(135deg, #0a192f 0%, #10151a 100%);
+}
+
+/* Kartlar için border görünürlüğü artırıldı */
+.repo-card {
+  border: 1.5px solid #b0b6be; /* açık temada daha koyu ve belirgin gri */
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  margin-bottom: 2rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.repo-card:hover {
+  border-color: #0891b2;
+  box-shadow: 0 4px 16px #0891b244;
+}
+[data-theme="dark"] .repo-card {
+  border: 1.5px solid #334155;
+  background: #1e293b;
+  box-shadow: 0 2px 8px rgba(8,145,178,0.08);
+}
+[data-theme="dark"] .repo-card:hover {
+  border-color: #06b6d4;
+  box-shadow: 0 4px 16px #06b6d444;
+}
+
+/* Açık temada .repo-timeline-item için arka planı beyaz, border'ı koyu gri (#b0b6be), hover'da ise açık maviye yakın bir arka plan ve accent border olacak şekilde güncellendi. Koyu temada mevcut kontrast korundu. */
+.repo-timeline-item {
+  background: #fff;
+  border: 1.5px solid #b0b6be;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  margin-bottom: 2rem;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+.repo-timeline-item:hover {
+  border-color: #0891b2;
+  box-shadow: 0 4px 16px #0891b244;
+  background: #f0fafd;
+}
+[data-theme="dark"] .repo-timeline-item {
+  background: #1e293b;
+  border: 1.5px solid #334155;
+  box-shadow: 0 2px 8px rgba(8,145,178,0.08);
+}
+[data-theme="dark"] .repo-timeline-item:hover {
+  border-color: #06b6d4;
+  box-shadow: 0 4px 16px #06b6d444;
+  background: #16202a;
 }
