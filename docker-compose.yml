@@ -1,0 +1,13 @@
+version: '1.0'
+
+services:
+  necmettincimengithubio:
+    container_name: necmettincimen-github-io
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+
+networks:
+  default:
+      name: srvnecmettin
