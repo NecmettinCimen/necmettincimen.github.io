@@ -24,4 +24,32 @@
     <loc>https://necmettincimen.xyz/404.html</loc>
     <priority>0.1</priority>
   </url>
+  <url>
+    <loc>https://blog-api-golang.necmettincimen.xyz/swagger/index.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cms-api.necmettincimen.xyz/index.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://marvel-api.necmettincimen.xyz/index.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://marvel-java-app.necmettincimen.xyz/swagger-ui/index.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://nec-ocelot-gateway.necmettincimen.xyz/swagger/index.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://nec-sys-api.necmettincimen.xyz/swagger/index.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://task-manager.necmettincimen.xyz/</loc>
+    <priority>0.6</priority>
+  </url>
 </urlset>
