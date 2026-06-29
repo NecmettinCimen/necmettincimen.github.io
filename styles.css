@@ -118,23 +118,6 @@
   }
 }
 
-/* Ensure proper overflow handling on mobile */
-@media (max-width: 768px) {
-  .fade-in-up-6 {
-    max-width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .fade-in-up-6 a {
-    flex: 1 1 auto;
-    min-width: 130px;
-    max-width: 100%;
-    justify-content: center;
-    font-size: 0.8rem;
-    padding: 0.5rem 0.75rem;
-  }
-}
-
 /* Force proper scrolling on mobile */
 html, body {
   overflow-x: hidden;
