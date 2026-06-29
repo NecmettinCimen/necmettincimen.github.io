@@ -2,7 +2,7 @@
 <html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="description" content="Necmettin Cimen - Head of Software &amp; AI-Focused Senior Solutions Architect in Istanbul. Nearly 8 years building high-concurrency enterprise platforms, microservices, LLM integrations and distributed architectures with .NET, Angular and Go.">
     <meta name="keywords" content="Necmettin Cimen, Head of Software, Senior Solutions Architect, .NET 10, .NET Core, Angular, Microservices, LLM, Ollama, AI Engineering, Kubernetes, Docker, Go, Istanbul, Remote Developer">
     <meta name="author" content="Necmettin Cimen">
@@ -138,7 +138,7 @@
       })();
     </script>
 </head>
-<body class="font-sans bg-gray-950 text-gray-100 overflow-x-hidden transition-colors duration-300 dark:bg-gray-950 dark:text-gray-100">
+<body class="font-sans bg-gray-950 text-gray-100 transition-colors duration-300 dark:bg-gray-950 dark:text-gray-100">
 
   <!-- Scroll Progress Bar -->
   <div id="scroll-progress" style="width:0%"></div>
@@ -183,7 +183,7 @@
       </div>
 
       <!-- Mobile Nav -->
-      <div id="mobile-nav" class="hidden md:hidden flex-col border-t border-gray-800 bg-gray-950/95 backdrop-blur-md px-4 py-4 gap-1">
+      <div id="mobile-nav" class="hidden md:hidden border-t border-gray-800 bg-gray-950/95 backdrop-blur-md px-4 py-4 gap-1">
         <a href="#home" class="mobile-nav-link block px-4 py-3 rounded-lg text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 transition-all text-sm font-medium">Home</a>
         <a href="#about" class="mobile-nav-link block px-4 py-3 rounded-lg text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 transition-all text-sm font-medium">About</a>
         <a href="#experience" class="mobile-nav-link block px-4 py-3 rounded-lg text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 transition-all text-sm font-medium">Experience</a>
@@ -195,11 +195,11 @@
 
   <main>
     <!-- ===== HERO ===== -->
-    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden dot-grid pt-16">
+    <section id="home" class="relative overflow-x-hidden overflow-y-auto dot-grid pt-20 pb-12 sm:min-h-screen sm:flex sm:items-center sm:justify-center">
       <!-- Background glow -->
-      <div class="absolute inset-0 pointer-events-none">
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-cyan-500/5 blur-3xl"></div>
-        <div class="absolute bottom-0 right-0 w-64 h-64 rounded-full bg-cyan-400/5 blur-2xl"></div>
+      <div class="absolute inset-0 pointer-events-none overflow-hidden">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] rounded-full bg-cyan-500/5 blur-3xl"></div>
+        <div class="absolute bottom-0 right-0 w-32 sm:w-64 h-32 sm:h-64 rounded-full bg-cyan-400/5 blur-2xl"></div>
       </div>
 
       <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
@@ -229,7 +229,7 @@
         </p>
 
         <!-- Stats -->
-        <div class="fade-in-up-4 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto mb-10" role="list" aria-label="Professional statistics">
+        <div class="fade-in-up-4 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl md:max-w-md mx-auto mb-10" role="list" aria-label="Professional statistics">
           <div class="stat-card group bg-gray-900/60 border border-gray-800 rounded-2xl p-5 hover:border-cyan-400/50 hover:-translate-y-1 transition-all duration-300" role="listitem">
             <div class="count-up text-4xl font-extrabold text-cyan-400 mb-1" data-target="8" data-suffix="yrs+">0</div>
             <div class="text-xs text-gray-500 uppercase tracking-widest font-medium">Years<br>Experience</div>
@@ -254,7 +254,7 @@
         </p>
 
         <!-- Tech Stack Marquee -->
-        <div class="fade-in-up-5 overflow-hidden mb-10 mask-fade-x" aria-label="Technology stack">
+        <div class="fade-in-up-5 overflow-hidden mb-10 mask-fade-x hidden sm:block" aria-label="Technology stack">
           <div class="marquee-track">
             <!-- doubled for infinite effect -->
             <span class="px-3 py-1.5 rounded-full border border-cyan-400/25 bg-cyan-400/5 text-cyan-300 text-xs font-medium whitespace-nowrap">.NET 10</span>
@@ -294,19 +294,19 @@
         </div>
 
         <!-- CTA Buttons -->
-        <div class="fade-in-up-6 flex flex-wrap items-center justify-center gap-4">
+        <div class="fade-in-up-6 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
           <a href="https://github.com/necmettincimen" target="_blank" rel="noopener noreferrer" aria-label="Visit GitHub profile"
-             class="flex items-center gap-2 px-6 py-3 rounded-full bg-gray-800 border border-gray-700 text-gray-200 font-medium text-sm hover:border-cyan-400/60 hover:text-cyan-400 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-cyan-400/10 transition-all duration-200">
+             class="flex items-center gap-2 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full bg-gray-800 border border-gray-700 text-gray-200 font-medium text-sm hover:border-cyan-400/60 hover:text-cyan-400 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-cyan-400/10 transition-all duration-200">
             <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
             GitHub
           </a>
           <a href="https://www.linkedin.com/in/necmettincimen" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn profile"
-             class="flex items-center gap-2 px-6 py-3 rounded-full bg-[#0077b5] border border-[#0077b5] text-white font-medium text-sm hover:bg-[#0066a0] hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-200">
+             class="flex items-center gap-2 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full bg-[#0077b5] border border-[#0077b5] text-white font-medium text-sm hover:bg-[#0066a0] hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-200">
             <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
             LinkedIn
           </a>
           <a href="necmettin-cimen-senior-full-stack-developer-cv.pdf" download aria-label="Download CV as PDF"
-             class="flex items-center gap-2 px-6 py-3 rounded-full bg-cyan-500 border border-cyan-500 text-gray-950 font-semibold text-sm hover:bg-cyan-400 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-cyan-400/30 transition-all duration-200">
+             class="flex items-center gap-2 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full bg-cyan-500 border border-cyan-500 text-gray-950 font-semibold text-sm hover:bg-cyan-400 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-cyan-400/30 transition-all duration-200">
             <i data-lucide="download" class="w-4 h-4"></i>
             Download CV
           </a>
