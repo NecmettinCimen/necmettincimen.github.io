@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (!entry.isIntersecting) return;
       const el = entry.target;
       const target = parseInt(el.getAttribute('data-target'), 10);
-      const suffix = el.getAttribute('data-suffix') || '+';
+      const suffix = el.getAttribute('data-suffix') ?? '+';
       const duration = 1200;
       const step = Math.ceil(duration / target);
       let current = 0;

@@ -108,6 +108,37 @@
 /* Count-up number */
 .count-up { font-variant-numeric: tabular-nums; }
 
+/* Hero stat cards */
+.stat-grid {
+  width: 100%;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 6.75rem;
+  padding: 1rem 0.625rem;
+  text-align: center;
+}
+
+.stat-card .stat-label {
+  max-width: 6.5rem;
+  margin-inline: auto;
+}
+
+@media (min-width: 640px) {
+  .stat-card {
+    min-height: 7.5rem;
+    padding: 1.25rem 0.75rem;
+  }
+
+  .stat-card .stat-label {
+    max-width: none;
+  }
+}
+
 /* Mobile nav open */
 #mobile-nav.open { display: flex; flex-direction: column; }
 
@@ -131,10 +162,11 @@ html, body {
     padding-bottom: 2rem !important;
   }
   .stat-card {
-    padding: 0.75rem !important;
+    min-height: 5.75rem;
+    padding: 0.875rem 0.5rem !important;
   }
   .count-up {
-    font-size: 1.5rem !important;
+    font-size: 1.75rem !important;
   }
 }
 
