@@ -103,11 +103,11 @@ document.addEventListener('DOMContentLoaded', function () {
   // ─── Typewriter ─────────────────────────────────────────────────
   const typewriterEl = document.getElementById('typewriter-text');
   const phrases = [
-    'Head of Software',
-    'AI Solutions Architect',
-    'Microservices & .NET Expert',
-    'LLM Integration Specialist',
-    'Team Lead & Mentor',
+    'Senior Full Stack Developer',
+    '.NET Core & Node.js Expert',
+    'Vue.js & React Specialist',
+    'Microservices Architect',
+    'Cloud-Native Engineer',
   ];
   let phraseIndex = 0, charIndex = 0, deleting = false;
 
@@ -170,6 +170,7 @@ document.addEventListener('DOMContentLoaded', function () {
     'SCSS':       { bg: 'bg-red-400/10',    text: 'text-red-400',    border: 'border-red-400/20'    },
     'CSS':        { bg: 'bg-pink-400/10',   text: 'text-pink-400',   border: 'border-pink-400/20'   },
     'HTML':       { bg: 'bg-orange-400/10', text: 'text-orange-400', border: 'border-orange-400/20' },
+    'Vue':        { bg: 'bg-green-400/10',  text: 'text-green-400',  border: 'border-green-400/20'  },
     'Java':       { bg: 'bg-amber-400/10',  text: 'text-amber-400',  border: 'border-amber-400/20'  },
     'C++':        { bg: 'bg-indigo-400/10', text: 'text-indigo-400', border: 'border-indigo-400/20' },
   };
